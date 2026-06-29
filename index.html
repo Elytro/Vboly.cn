@@ -1,1 +1,449 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Title -->
+    <title>微薄利官网,品牌内容提供商</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!--  Meta tags -->
+    <meta name="keywords" content="微薄利,试用网,试客网,返利网,限时抢购,限时免费,免费试用,免费试用网,微薄利商城">
+    <meta name="description" content="微薄利商城(www.vboly.cn)提供商品限时抢购，限时免费的微薄返利，微薄利是实现50%-100%的高额返现免费试用网，微薄利也是免费试用的试用网和试客网，会员可以限时抢购限时免费的商品。">
+    <!-- Open Graph -->
+    <meta property="og:title" content="微薄利商城">
+    <meta property="og:type" content="WebSite">
+    <meta property="og:url" content="https://www.vboly.cn/">
+    <meta property="og:image" content="assets/brand/bootstrap-social.png">
+    <meta property="og:description" content="微薄利商城(www.vboly.cn)提供商品限时抢购，限时免费的微薄返利，微薄利是实现50%-100%的高额返现免费试用网，微薄利也是免费试用的试用网和试客网，会员可以限时抢购限时免费的商品。">
+    <meta property="og:site_name" content="微薄利商城">
+    <!-- Bootstrap CSS -->
+    <link href="https://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            background: #ffffff;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: logoFloat 3s ease-in-out infinite;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.1);
+        }
+
+        @keyframes logoFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        h1 {
+            color: #333;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            background: #ff6b9d;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 15px 50px;
+            border-radius: 25px;
+            display: inline-block;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #ff85ad;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .link {
+            display: block;
+            margin-top: 25px;
+            color: #999;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .link:hover {
+            color: #ff6b9d;
+            text-decoration: none;
+        }
+
+        .divider {
+            height: 1px;
+            background: #e5e5e5;
+            margin: 40px 0;
+        }
+
+        .features {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 0;
+            margin-top: 40px;
+        }
+
+        .features li {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .features li::before {
+            content: '✦ ';
+            color: #ff6b9d;
+        }
+
+        .rolling {
+            margin-top: 40px;
+            overflow: hidden;
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 12px 15px;
+        }
+
+        .rolling-wrapper {
+            display: flex;
+            animation: scroll 20s linear infinite;
+        }
+
+        .rolling-item {
+            white-space: nowrap;
+            padding-right: 50px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .rolling:hover .rolling-wrapper {
+            animation-play-state: paused;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .footer p {
+            color: #999;
+            font-size: 12px;
+            margin: 5px 0;
+        }
+
+        .footer a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #ff6b9d;
+            text-decoration: none;
+        }
+
+        /* 登录注册模态框样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: #1a1a2e;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .modal-header h2 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .modal-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .modal-tab {
+            color: rgba(255, 255, 255, 0.5);
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .modal-tab.active {
+            color: #ff6b9d;
+            border-bottom-color: #ff6b9d;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .form-control:focus {
+            border-color: #ff6b9d;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            border: none;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(196, 69, 105, 0.4);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 28px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            background: none;
+            border: none;
+        }
+
+        .close-btn:hover {
+            color: #ff6b9d;
+        }
+
+        .modal-form {
+            display: none;
+        }
+
+        .modal-form.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .logo {
+                width: 80px;
+                height: 80px;
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="/favicon.ico" alt="Logo">
+        </div>
+        <h1>新人优惠卷</h1>
+        <p> 打 破 次 元 壁，遇 见 另 一 个 自 己 </p>
+        <a href="#" class="btn" onclick="showModal(); return false;"> 开 始 探 索 </a>
+        <a href="//www.xykjf.com/" class="link">了解更多 →</a>
+
+        <div class="divider"></div>
+
+        <ul class="features">
+            <li><a href="">领券省钱全攻略</a></li>
+            <li><a href="">手把手教你薅羊毛</a></li>
+            <li><a href="">大额优惠券领取方法</a></li>
+        </ul>
+
+        <div class="footer">
+            <p><a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备2025144109号-1</a> · <a href="https://www.beian.gov.cn/portal/registerSystemInfo" target="_blank">鲁公网安备37130202372520号</a></p>
+            <p>&copy; 2026 微薄利商城 · 新人优惠卷 · 临沂市微薄利信息技术有限公司 版权所有</p>
+        </div>
+    </div>
+
+    <!-- 登录注册框 -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <!-- 登录表单 -->
+            <form class="modal-form active" id="loginForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="用户名/邮箱">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="密码">
+                </div>
+                <button type="submit" class="btn-submit">登录</button>
+            </form>
+
+            <!-- 注册表单 -->
+            <form class="modal-form" id="registerForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="用户名">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="邮箱">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="密码">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="确认密码">
+                </div>
+                <button type="submit" class="btn-submit">注册</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script>
+        function showModal() {
+            document.getElementById('authModal').classList.add('active');
+        }
+
+        function hideModal() {
+            document.getElementById('authModal').classList.remove('active');
+        }
+
+        function switchTab(tab) {
+            const tabs = document.querySelectorAll('.modal-tab');
+            const forms = document.querySelectorAll('.modal-form');
+
+            tabs.forEach(t => t.classList.remove('active'));
+            forms.forEach(f => f.classList.remove('active'));
+
+            if (tab === 'login') {
+                tabs[0].classList.add('active');
+                forms[0].classList.add('active');
+            } else {
+                tabs[1].classList.add('active');
+                forms[1].classList.add('active');
+            }
+        }
+
+        // 点击模态框外部关闭
+        document.getElementById('authModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideModal();
+            }
+        });
+
+        // 阻止表单提交
+        document.querySelectorAll('.modal-form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('请填写正确的账户或密码...');
+            });
+        });
+    </script>
+</body>
+</html>
